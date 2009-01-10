@@ -1,7 +1,7 @@
 module ActiveRecord
   class Base
     def self.id_sequence
-      "#{table_name}_id_seq"
+      connection.default_sequence_name
     end
     
     # Returns the next id on the table's id sequence.
