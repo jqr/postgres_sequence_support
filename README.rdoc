@@ -10,9 +10,22 @@ Very basic support for manipulating PostgreSQL sequences from ActiveRecord.
   c = ActiveRecord::Base.connection
   c.set_sequence('users_id_seq', 1000)
   c.next_in_sequence('users_id_seq')      # => 1001
+  
+  # Note : create sequence don't do anything if sequence already exists
+  c.create_sequence('my_own_seq')
+  c.next_in_sequence('my_own_seq')        # => 1
+  
+  # You can specify sequence start
+  c.create_sequence('my_own_seq', 1001)
+  c.next_in_sequence('my_own_seq')        # => 1001
+  
+  # Check if sequence exists
+  c.sequence_exists?('my_own_seq')        # => true
+  c.sequence_exists?('my_other_seq')      # => false
+  
+  # Drop sequence if it exists
+  c.drop_sequence('my_own_seq')
 
 
 Homepage:: http://github.com/jqr/postgres_sequence_support
 License:: Copyright (c) 2008 Elijah Miller <mailto:elijah.miller@gmail.com>, released under the MIT license.
-
-
