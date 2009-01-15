@@ -1,0 +1,1 @@
+require 'postgres_sequence_support'

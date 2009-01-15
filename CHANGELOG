@@ -1,3 +1,5 @@
+v0.0.4. Cleanup of gem release and proper Rails plugin support.
+
 v0.0.3. Initial gem release.
 
 v0.0.2. Added create_sequence an drop_sequence by Jonathan Tron [JonathanTron].

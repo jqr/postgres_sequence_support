@@ -1,6 +1,8 @@
 CHANGELOG
+init.rb
+lib/postgres_sequence_support.rb
 LICENSE
-postgres_sequences.rb
+Manifest
+postgres_sequence_support.gemspec
 Rakefile
 README.rdoc
-Manifest
