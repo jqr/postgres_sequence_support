@@ -1,0 +1,6 @@
+v0.0.3. Initial gem release.
+
+v0.0.2. Added create_sequence an drop_sequence by Jonathan Tron [JonathanTron].
+        Proper id_sequence inference by Jonathan Tron [JonathanTron].
+
+v0.0.1. Initial release.

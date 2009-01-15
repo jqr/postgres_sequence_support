@@ -1,6 +1,6 @@
 = Postgres Sequence Support
 
-Very basic support for manipulating PostgreSQL sequences from ActiveRecord.
+Easy manipulation of PostgreSQL sequences from ActiveRecord.
 
 == Examples
 
@@ -25,6 +25,20 @@ Very basic support for manipulating PostgreSQL sequences from ActiveRecord.
   
   # Drop sequence if it exists
   c.drop_sequence('my_own_seq')
+  
+  
+== Install
+
+As a Rails plugin.
+
+  ./script/plugin install git://github.com/jqr/postgres_sequence_support.git
+
+Prefer gems? Add this to your environment.rb and run the following command.
+
+  config.gem 'jqr-postgres_sequence_support', :lib => 'postgres_sequence_support', :source => 'http://gems.github.com'
+
+  $ rake gems:install
+
 
 
 Homepage:: http://github.com/jqr/postgres_sequence_support
