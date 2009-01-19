@@ -22,19 +22,15 @@ module ActiveRecord
     class PostgreSQLAdapter 
       # Returns the next value in sequence.
       def next_in_sequence(sequence)
-        select_value("SELECT nextval(#{quote_table_name(sequence)})").to_i
+        select_value("SELECT nextval('#{PGconn.quote_ident(sequence)}')").to_i
       end
 
       def current_in_sequence(sequence)
-        select_value("SELECT currval(#{quote_table_name(sequence)})").to_i
-      end
-
-      def current_in_sequence(sequence)
-        select_value("SELECT lastval(#{quote_table_name(sequence)})").to_i
+        select_value("SELECT currval('#{PGconn.quote_ident(sequence)}')").to_i
       end
 
       def set_sequence(sequence, value, value_used = true)
-        select_value("SELECT setval(#{quote_table_name(sequence)}, #{quote(value)}, #{quote(value_used)})")
+        select_value("SELECT setval('#{PGconn.quote_ident(sequence)}', #{quote(value)}, #{quote(value_used)})")
       end
 
       def create_sequence(sequence, start = nil)
