@@ -1,3 +1,5 @@
+v0.0.5. Remove duplicate and correct quoting by Jonathan Tron [JonathanTron].
+
 v0.0.4. Cleanup of gem release and proper Rails plugin support.
 
 v0.0.3. Initial gem release.
