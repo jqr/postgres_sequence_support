@@ -39,6 +39,9 @@ Prefer gems? Add this to your environment.rb and run the following command.
 
   $ rake gems:install
 
+== Docs
+
+http://rdoc.info/projects/jqr/postgres_sequence_support
 
 
 Homepage:: http://github.com/jqr/postgres_sequence_support
