@@ -35,7 +35,7 @@ As a Rails plugin.
 
 Prefer gems? Add this to your environment.rb and run the following command.
 
-  config.gem 'jqr-postgres_sequence_support', :lib => 'postgres_sequence_support', :source => 'http://gems.github.com'
+  config.gem 'postgres_sequence_support'
 
   $ rake gems:install
 
