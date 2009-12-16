@@ -44,7 +44,11 @@ module ActiveRecord
       end
 
       def sequence_exists?(sequence)
-        query("SELECT relname FROM pg_class WHERE relkind='S'").flatten.include?(sequence)
+        sequences.include?(sequence)
+      end
+      
+      def sequences
+        query("SELECT relname FROM pg_class WHERE relkind='S'").flatten
       end
     end
   end
